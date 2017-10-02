@@ -9,11 +9,8 @@ Danpatpang:
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
     단판빵을 좋아하는 개발자.
-    하고싶은 것도 배우고 싶은 것도 많은 꿈 많은 대학생이다.
+    하고싶은 것도 배우고 싶은 것도 많은 꿈 많은 대학생.
     
-
-    Open `_data/authors.yml` to edit this text.
-
   # This photo will be used in the about section
   picture:
     src:             /assets/img/me.jpg
