@@ -8,8 +8,10 @@ Danpatpang:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    단판빵을 좋아하는 개발자.
-    하고싶은 것도 배우고 싶은 것도 많은 꿈 많은 대학생.
+    <p>단판빵을 좋아하는 개발자.</p>
+    <p>하고싶은 것도 배우고 싶은 것도 많은 꿈 많은 대학생.</p>
+    <br>
+    <br>
     
   # This photo will be used in the about section
   picture:
