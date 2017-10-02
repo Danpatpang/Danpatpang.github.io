@@ -4,7 +4,7 @@ title : "[JavaScript] W3C JavaScript (3)"
 subtitle : "[JavaScript] JavaScript의 Output"
 categories : Development
 tags : JavaScript
-commens : ture
+comments : ture
 
 ---
 
