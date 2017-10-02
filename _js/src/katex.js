@@ -1,6 +1,10 @@
 // Copyright (c) 2017 Florian Klampfer
 // Licensed under MIT
 
+/* eslint-disable no-param-reassign */
+
+import katex from 'katex';
+
 import { hasFeatures, hide, matches } from './common';
 
 const REQUIREMENTS = [
@@ -8,12 +12,14 @@ const REQUIREMENTS = [
   'queryselector',
 ];
 
-const featuresOk = hasFeatures(REQUIREMENTS);
-let katexJSLoaded = false;
-let katexCSSLoaded = false;
+function willChangeContent(mathBlocks) {
+  Array.prototype.forEach.call(mathBlocks, (el) => {
+    el.style.willChange = 'content'; // eslint-disable-line no-param-reassign
+  });
+}
 
 function replaceMathBlock(el, tex) {
-  el.outerHTML = window.katex.renderToString(tex, {
+  el.outerHTML = katex.renderToString(tex, {
     displayMode: el.type === 'math/tex; mode=display',
   });
 }
@@ -44,23 +50,18 @@ function changeContent(mathBlocks) {
 }
 
 export default function upgradeMathBlocks() {
-  if (featuresOk) {
+  if (hasFeatures(REQUIREMENTS)) {
     const mathBlocks = document.querySelectorAll('script[type^="math/tex"]');
     if (mathBlocks.length) {
-      if (katexJSLoaded && katexCSSLoaded) {
-        changeContent(mathBlocks);
-      } else {
-        loadJSDeferred(document.getElementById('_katexJS').href, () => {
-          katexJSLoaded = true;
-          if (katexJSLoaded && katexCSSLoaded) upgradeMathBlocks();
-        });
-        loadCSS(document.getElementById('_katexCSS').href).onload = () => {
-          katexCSSLoaded = true;
-          if (katexJSLoaded && katexCSSLoaded) upgradeMathBlocks();
-        };
-      }
+      willChangeContent(mathBlocks);
+      changeContent(mathBlocks);
     }
   }
 }
 
-upgradeMathBlocks();
+if (hasFeatures(REQUIREMENTS)) {
+  // TODO: load on demand?
+  const ref = document.getElementsByTagName('style')[0];
+  const style = loadCSS('https://unpkg.com/katex@0.7.1/dist/katex.min.css', ref);
+  style.addEventListener('load', upgradeMathBlocks);
+}

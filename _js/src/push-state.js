@@ -1,6 +1,14 @@
 // Copyright (c) 2017 Florian Klampfer
 // Licensed under MIT
 
+/*
+eslint-disable
+no-param-reassign,
+import/no-extraneous-dependencies,
+import/no-unresolved,
+import/extensions
+*/
+
 import { Observable } from 'rxjs/Observable';
 import { fromEvent } from 'rxjs/observable/fromEvent';
 
@@ -208,7 +216,7 @@ if (!window.disablePushState && hasFeatures(REQUIREMENTS)) {
     ::debounceTime(2 * DURATION)
     ::effect(() => {
       // Send google analytics pageview
-      if (window.ga) window.ga('send', 'pageview', location.pathname);
+      if (window.ga) window.ga('send', 'pageview');
 
       // Upgrade math blocks
       upgradeMathBlocks();
