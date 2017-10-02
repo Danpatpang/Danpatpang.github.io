@@ -21,7 +21,7 @@
     {{ post.content }}
   {% else %}
     {{ post.excerpt }}
-    <p class="read-more">Continue reading <a class="heading" href="{{ post.url | relative_url }}" data-flip="title">{{ post.title }}</a></p>
+    <p class="read-more" style="text-align:right"><a class="heading" href="{{ post.url | relative_url }}" data-flip="title">Continue reading</a></p>
   {% endunless %}
 
 </article>
