@@ -30,9 +30,11 @@
 
 {% unless page.redirect %}
   <!--[if gt IE 9]><!---->
-  {% capture js_url %}{% link assets/js/hydejack.js %}?v=6.6.1{% endcapture %}
+  {% capture js_url %}{% link assets/js/hydejack.js %}?v=6.4.0{% endcapture %}
   <script>loadJSDeferred('{{ js_url | relative_url }}');</script>
 
-  {% include my-scripts.html %}
+  {% comment %}
+    {% include my-scripts.html %}
+  {% endcomment %}
   <!--<![endif]-->
 {% endunless %}
