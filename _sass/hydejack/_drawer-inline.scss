@@ -5,12 +5,9 @@
 
   .y-drawer-content {
     width: 18rem;
-    left: -17.5rem;
+    left: -18rem;
     z-index: 3;
 
-    @media (min-width: $break-point-dynamic) {
-      width: $dynamic-width;
-    }
   }
 
   // header, body::before {
