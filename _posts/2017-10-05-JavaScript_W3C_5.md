@@ -143,5 +143,5 @@ JavaScript 구문들은 JavaScript가 수행하는 역할들을 식별하기 위
 | try ... catch | 블럭의 구문에 오류를 처리하기 위해 구현합니다. |
 | var | 변수를 선언합니다. |
 
-> JavaScript keyword는 예약어입니다.
+> JavaScript keyword는 예약어입니다.<br>
 > 예약어는 변수로 사용할 수 없습니다.
