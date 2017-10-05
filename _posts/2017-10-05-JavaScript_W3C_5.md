@@ -77,8 +77,11 @@ JavaScript는 다중의 공백을 무시합니다. 우리는 코드의 가독성
 JavaScript의 구문은 `;`에 의해 분리되는 것만 유의하시면 됩니다.
 **Example**
 ```
-
-``` 
+var person="Danpatapng";
+person = "Danpatpang";
+person =
+"Danpatpang";
+```
 
 ### JavaScript의 Line length와 Line Block
 
@@ -87,7 +90,8 @@ JavaScript의 구문은 `;`에 의해 분리되는 것만 유의하시면 됩니
 
 **Example**
 ```
-
+document.getElementById("example").innerHTML =
+"Danpatpang";
 ```
 
 ### JavaScript Code Block
@@ -100,7 +104,22 @@ JavaScript 구문은 `{...}`처럼 중괄호 안에 코드 블럭으로 묶을 �
 
 **Example**
 ```
-
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Statements</h2>
+        <button type="button" onclick="myFunction()">Click Me!</button>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script>
+            function myFunction() {
+                document.getElementById("demo1").innerHTML = "Hello!";
+                document.getElementById("demo2").innerHTML =
+                "I'm Danpatpang";
+            }
+        </script>
+    </body>
+</html>
 ```
 
 > 이 튜토리얼에서는 코드의 여백을 4칸으로 사용하고 있습니다.
@@ -109,8 +128,9 @@ JavaScript 구문은 `{...}`처럼 중괄호 안에 코드 블럭으로 묶을 �
 
 JavaScript 구문들은 JavaScript가 수행하는 역할들을 식별하기 위해서 `keyword`를 앞에 붙여 함께 사용합니다.
 다음은 튜토리얼에서 다루게 될 `keyword`의 목록입니다.
+
 | Keyword | Description |
-|--------|--------|
+|:-:	|---	|
 | break | swith와 같은 loop문들을 종료합니다. |
 | continue | 실행중인 loop에서 나온 후, 코드 블럭의 맨 위로 갑니다. |
 | debugger | JavaScript의 실행을 멈추고, debugging 함수를 호출합니다. |
@@ -122,5 +142,6 @@ JavaScript 구문들은 JavaScript가 수행하는 역할들을 식별하기 위
 | switch | 각기 다른 case들에 의존하여 다른 코드 블럭들을 실행합니다. |
 | try ... catch | 블럭의 구문에 오류를 처리하기 위해 구현합니다. |
 | var | 변수를 선언합니다. |
+
 > JavaScript keyword는 예약어입니다.
 > 예약어는 변수로 사용할 수 없습니다.
