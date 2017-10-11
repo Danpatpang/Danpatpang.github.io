@@ -23,22 +23,22 @@ Alpha-cut과 Beta-cut은 연산 중 불필요한 연산을 가지를 치 듯 버
 두 경우는 모든 자식노드를 검사해봐야 선택하지 않을 확률이 높다. 그래서 이런 경우가 확정 시 그 노드의 자식노드에 대한 평가를 중지함으로써 불필요한 연산을 줄일 수 있다. Alpha-cut은 자신이 상대방보다 불리하여, 현재 저장된 값보다 더 높은 값이 조회된 경우, 다음 조회 노드를 pruning하는 것이다. Beta-cut은 자신이 상대방보다 유리하여, 현재 저장된 값보다 더 높은 값이 조회된 경우, 다음 조회 노드를 pruning하는 것이다.<br>
 이 트리는 중위 순회 방식으로 조회하며 3 수 앞까지 예측할 수 있다고 가정하겠다.
 
-![tree1](https://Danpatpang.github.io/assets/img/AI/pruning_1)
+![tree1](https://Danpatpang.github.io/assets/img/AI/pruning_1.jpg)
 
  다음의 노드들에게 임의의 이름을 붙여주었다. 또한 현재의 Value값을 모르기 때문에 +∞ Alpha cut이 일어나기 위해서는 비교하는 값이 Alpha에 저장된 값보다 작아야 하므로 -∞, Beta cut이 일어나기 위해서는 비교하는 값이 Beta에 저장된 값보다 커야 하므로 +∞로 정의 하겠다. 트리는 중위 순회 방식으로 가장 좌측의 자식 노드인 3부터 조회를 시작하게 된다.
 
-![tree2](https://Danpatpang.github.io/assets/img/AI/pruning_2)
+![tree2](https://Danpatpang.github.io/assets/img/AI/pruning_2.jpg)
 
  먼저 A의 노드에 3이라는 값이 저장되게 된다. 아직까지는 다른 자식노드의 값이 어떤 값이 나올지라도 cut이 일어나지 않으므로 Alpha와 Beta의 값을 정의할 수 없다. 이후, 4의 값을 조회하게 되는데 현재 A의 위치는 나의 턴이므로 가장 큰 값을 고르는 것이 유리하다. 그러므로 A의 값은 4로 확정되고 그 부모노드인 E도 4의 값이 저장된다. 이제, 노드 E의 좌측  순환이 끝났으며, E는 상대방의 턴이므로 최소의 값을 선택하려 할 것이다. 그러므로 E의 우측 노드를 순환할 때, 현재 저장된 4를 Beta 값으로 가지고 순환하게 된다.
 
-![tree3](https://Danpatpang.github.io/assets/img/AI/pruning_3)
+![tree3](https://Danpatpang.github.io/assets/img/AI/pruning_3.jpg)
 
  B는 좌측의 노드부터 다시 순환하게 되는데 노드의 값 3으로 Beta 값보다 작은 값이 나오게 되었다. 이에 따라, 우측 노드에 더 큰 값이 나올 수 있으므로 Beta cut은 발생하지 않고 우측 노드를 순회하게 된다. 우측 노드 값이 현재 B의 저장된 값보다 작으므로 E는 A와 B를 비교하게 되고 상대방의 턴이므로 더 작은 3으로 값이 확정되며 G의 값은 3이 임시 저장된다. 이제, 노드 G의 좌측 노드 순환이 끝났으며, G는 나의 턴이므로 최대의 값을 선택하려 할 것이다. 그러므로 G의 우측 노드를 순환할 때, 현재 저장된 3을 Alpha 값으로 가지고 순환하게 된다.
 
-![tree4](https://Danpatpang.github.io/assets/img/AI/pruning_4)
+![tree4](https://Danpatpang.github.io/assets/img/AI/pruning_4.jpg)
 
 노드 C와 F도 좌측 순환과 동일하게 내려오게 된다. 노드 C가 나의 턴이므로 6과 2중에서 더 높은 6을 C의 값으로 가지게 된다. 이 때, Alpha cut은 3보다 작아야 하는데 크므로 Alpha cut이 일어나지 않는다. 노드 F에는 임시로 6의 값이 저장되며 상대방의 턴이므로 자신의 우측 노드를 순환할 때, 현재 임시 저장된 6을 Beta 값으로 가지게 된다.
 
-![tree5](https://Danpatpang.github.io/assets/img/AI/pruning_5)
+![tree5](https://Danpatpang.github.io/assets/img/AI/pruning_5.jpg)
 
  노드 D는 좌측 순환 시 값이 0으로 Beta의 값보다 작은 값이다. Beta cut은 발생하지 않게 되고, 우측 노드의 값은 1로 더 큰 1이 D의 값으로 저장되게 된다. 또한, 노드 F는 상대방의 턴이므로 더 작은 값을 선택하므로 1을 저장하게 된다. 노드 G는 나의 턴이므로 노드 E와 노드 F 중 더 큰 값을 가지게 된다. 노드 E가 3으로 더 큰 값이므로 노드 G는 3을 Value로 가질 것이다.
