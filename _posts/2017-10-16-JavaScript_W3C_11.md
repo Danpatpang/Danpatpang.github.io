@@ -85,3 +85,117 @@ var x2 = 34;
 var x = 123e5;	// 12300000
 var z = 123e-5;	// 0.00123
 ```
+### JavaScript Booleans
+
+Booleans는 오직 true / false의 값만 가질 수 있습니다.
+**Example**
+```
+var x = 5;
+var y = 5;
+var z = 6;
+(x == y);		// return true
+(x == z);		// return false
+```
+Booleans는 조건의 테스트 용도로 사용됩니다.
+
+### JavaScript Arrays
+
+JavaScript배열은 대괄호`[]`로 작성되며 배열의 요소는 `,`로 분리됩니다.
+다음 코드는 cars라는 배열을 선언하고 3개의 요소를 가지고 있습니다.
+**Example**
+```
+var cars = ["Volvo", "BMW", "SM5"];
+```
+배열의 인덱스는 0부터 시작합니다. 즉, 첫 번째 항목은 cars[0]이고 두 번째 항목은 cars[1]입니다.
+
+### JavaScript Objects
+
+JavaScript 객체들은 중괄호`{}`로 작성됩니다.
+객체의 속성들은 `name : value`의 쌍으로 작성되며 `,`로 분리됩니다.
+**Example**
+```
+var person = {firstName:"Dan", lastName:"patpang" age:25, job:"student" };
+```
+위의 예제에서 person객체는 fristName, lastName, age, job이라는 4가지 속성을 가지고 있습니다.
+
+### The typeof Operator
+
+우리는 JavaScirpt에서 JavaScript 변수의 type을 찾기 위해 `typeof` 연산자를 사용할 수 있습니다.
+`typeof`연산자는 변수 또는 표현식의 type을 반환합니다.
+**Example**
+```
+typeof "";		// return string
+typeof "Dan";	// return string
+typeof "25";	// retrun string
+typeof 0;		// return number
+typeof 3.14;	// return number
+typeof (3+4);	// return number
+```
+
+### Undefined
+
+JavaScript에서 값을 가지고 있지 않은 변수들은 undefined 값을 가집니다.
+값을 undefined로 설정하면 변수를 비울 수 있으며 type또한 정의되지 않습니다.
+**Example**
+```
+var car;	// value is undefined, type is undefined
+car = undefined;	// value is undefined, type is undefined
+```
+### Empty Values
+
+비어있는 값은 undefined와 아무런 관련이 없습니다.
+빈 문자열은 유효한 값과 문자열을 가집니다.
+**Example**
+```
+var car = "";		// The value is "", The type is String
+```
+
+### Null
+
+JavaScript에서 null은 아무것도 아닙니다. 이것은 존재하지 않는 것으로 가정합니다.
+불행하게도 JavaScript에서 null의 데이터 유형은 `object`입니다.
+
+> typeof null의 값이 object라는 점은 JavaScript의 버그라고도 생각할 수 있습니다.
+
+**Example**
+```
+var person = {firstName:"Dan", lastName:"patpang" age:25, job:"student" };
+person = null;		//현재의 값은 null, type은 object
+```
+
+### Difference Between Undefined and Null
+undefined와 null은 값은 동일하지만 type은 동일하지 않습니다.
+**Example**
+```
+typeof undefined;		// undefined
+typeof null;			// object
+
+null === undefined		// false
+null == undefined		// true
+```
+
+### Primitive Data
+
+primate data의 값은 추가 속성 및 메서드가 없는 단순한 데이터 값입니다.
+typeof 연산자는 이런 primate type중 하나를 반환합니다.( string, number, boolean, undefined )
+**Example**
+```
+typeof "Dan";		// return string
+typeof 3.14;		// return number
+typeof true;		// return boolean
+typeof false;		// retrun boolean
+typeof x;			// return undefined
+```
+
+### Complex Data
+
+typeof 연산자는 2개의 복잡한 type을 반환할 수 있습니다.( function, object )
+typeof 연산자는 객체, 배열 및 null에 대해 object를 반환하며, 함수에 대해서는 객체를 반환하지 않습니다.
+**Example**
+```
+typeof {name:'Dan', age:25};	//return object
+typeof [1, 2, 3, 4];			//return object
+typeof null;					//return object
+typeof function Func(){};		//return function
+```
+> typeof 연산자는 JavaScript배열이 객체이므로 object를 반환합니다.
