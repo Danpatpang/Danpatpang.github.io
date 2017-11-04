@@ -47,3 +47,34 @@ function function_name(parameter1, parameter2, parameter3){
 
 ### Function Return
 JavaScript가 `return statement`에 도착하면, 함수의 실행는 중지됩니다.
+만약 함수가 호출된다면, JavaScript는 호출 문장 다음의 코드를 실행하기 위해 반환합니다.
+함수는 종종 반환 값을 계산하기도 하며, 반환 값은 호출자에게 반환됩니다.
+
+**Example**
+```
+var x = myFunc(4, 3);	//Function is called
+
+function myFunc(a, b) {	//Function returns 12
+	return a*b;
+}
+```
+### Why Functions?
+
+코드를 재사용 할 수 있습니다 : 코드를 한 번만 정의하면, 계속해서 사용할 수 있습니다.
+동일한 코드라면, 인자 값에 따라 다른 결과 값을 생성할 수 있습니다.
+
+**Example**
+```
+function toCelsius(fahrenheit){
+	retrun (5/9) * (fahrenheit - 32);
+}
+document.getElementById("demo").innerHTML = toCelsius;
+```
+### Functions Used as Variable Values
+
+함수는 모든 유형의 수식, 대입 및 계산에서 변수를 사용할 때와 같은 방식으로 사용합니다.
+```
+var x = toCelsisus(77);
+var text = "the temp is " + x + "Celsius";
+var text = "the temp is " + toCelsius(77) + "Celsisus";
+```
