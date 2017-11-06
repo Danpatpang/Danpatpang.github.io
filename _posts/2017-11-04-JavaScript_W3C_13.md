@@ -75,3 +75,100 @@ var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 
 ### Object Definition
 우리는 객체 리터럴을 사용하여 JavaScript 객체를 정의(및 생성)합니다.
+띄어쓰기와 줄바꿈을 중요하지 않습니다. 객체는 다중의 라인으로 작성 될 수 있습니다.
+
+**Example**
+```
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+//equal
+var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue"
+};
+```
+
+### Accessing Object Properties
+
+우리는 2가지 방법으로 객체의 속성에 접근할 수 있습니다.
+
+**Example**
+```
+// objectName.propertyName
+<script>
+    var person = {
+        firstName: "John",
+        lastName : "Doe",
+        id       :  5566
+    };
+
+    document.getElementById("demo").innerHTML =
+    person.firstName + " " + person.lastName;
+</script>
+```
+```
+// objectName["propertyName"]
+<script>
+    var person = {
+        firstName: "John",
+        lastName : "Doe",
+        id       :  5566
+    };
+
+    document.getElementById("demo").innerHTML =
+	person["firstName"] + " " + person["lastName"];
+</script>
+```
+
+### Accessing Object Methods
+
+메서드는 다음과 같은 문법으로 접근할 수 있습니다.
+```
+objectName.methodName()
+```
+**Example**
+```
+<script>
+    var person = {
+        firstName: "John",
+        lastName : "Doe",
+        id       : 5566,
+        fullName : function() {
+           return this.firstName + " " + this.lastName;
+        }
+    };
+
+    document.getElementById("demo").innerHTML = person.fullName();
+</script>
+```
+만약 메서드에서 ()를 생략하고 접근한다면, 함수의 정의가 반환됩니다.
+```
+<script>
+    var person = {
+        firstName: "John",
+        lastName : "Doe",
+        id       : 5566,
+        fullName : function() {
+           return this.firstName + " " + this.lastName;
+        }
+    };
+
+    document.getElementById("demo").innerHTML = person.fullName;
+    // 결과 값
+    // function () { return this.firstName + " " + this.lastName; }
+</script>
+```
+> 메서드는 실제로 속성의 값으로써 저장되는 함수 정의입니다.
+
+### Do Not Declare Strings, Numbers, and Booleans as Objects!
+
+JavaScript 변수는 "new"라는 키워드와 함께 선언됩니다.
+변수는 객체로서 생성됩니다.
+
+```
+var x = new String();        // Declares x as a String object
+var y = new Number();        // Declares y as a Number object
+var z = new Boolean();       // Declares z as a Boolean object
+```
+String, Number, Boolean 객체는 피하는 것이 좋습니다. 코드가 복잡해지고 실행 속도가 느려지게 됩니다.
