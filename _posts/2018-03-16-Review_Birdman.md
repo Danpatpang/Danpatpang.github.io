@@ -3,13 +3,11 @@ layout : post
 title : "[Review] 버드맨(Birdman) : 누구에게나 버드맨은 있다."
 subtitle : "[Review] 버드맨(Birdman) : 누구에게나 버드맨은 있다."
 categories : Review
-tags : movie
+tags : Movie
 comments : true
 
 ---
-<center>
 ![4](https://Danpatpang.github.io/assets/img/movie/birdman/4.jpg)
-</center>
 
 #버드맨(Birdman) : 누구에게나 버드맨은 있다.
 
