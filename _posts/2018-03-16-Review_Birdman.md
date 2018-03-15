@@ -1,9 +1,9 @@
 ---
 layout : post
 title : "[Review] 버드맨(Birdman)"
-subtitle : "버드맨(Birdman) : 누구에게나 버드맨은 있다."
+subtitle : "[Review] 누구에게나 버드맨은 있다."
 categories : Review
-tags : movie
+tags : Movie
 comments : true
 
 ---
@@ -28,7 +28,7 @@ _ _ _
 
 우리는 그들을 배우라고 부른다. 그들은 우리에게 많은 메시지를 던지려고 노력한다. 영화 버드맨은 우리 또한 배우라는 것을 전하려고 노력했다. 집 밖을 나서는 순간 우리는 진정한 우리의 모습을 감추며 살아간다. 또한 우리에게서 가장 익숙한 배우로 연기하려고 노력한다. 그렇기에 새로운 배우로 연기하려는 주인공의 모습에 거부감을 느낀 것일지도 모른다.
 
-#  “박수칠 때 떠나라.” 과연 그 때 떠난 사람들은 지금 행복할까?
+###  “박수칠 때 떠나라.” 과연 그 때 떠난 사람들은 지금 행복할까?
 
 ![6](https://Danpatpang.github.io/assets/img/movie/birdman/6.jpg)
 
