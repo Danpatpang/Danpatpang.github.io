@@ -1,7 +1,7 @@
 ---
 layout : post
-title : "[Review] 버드맨(Birdman)"
-subtitle : "[Review] 누구에게나 버드맨은 있다."
+title : "[Movie] 버드맨(Birdman)"
+subtitle : "[Movie] 누구에게나 버드맨은 있다."
 categories : Review
 tags : Movie
 comments : true
