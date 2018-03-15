@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
 title: movie
-slug: Movie
+slug: movie
 category: Review
 menu: false
 order: 3
