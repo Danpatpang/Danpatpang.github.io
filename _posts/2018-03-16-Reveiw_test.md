@@ -2,8 +2,8 @@
 layout : post
 title : "[Review] testing"
 subtitle : "[Review]test."
-categories : Review
-tags : Book
+categories : Development
+tags : Angularjs
 comments : true
 
 ---
