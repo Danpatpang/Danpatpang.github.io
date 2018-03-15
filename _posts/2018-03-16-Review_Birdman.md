@@ -9,7 +9,7 @@ comments : true
 ---
 
 > 이 글은 주관적인 영화 소감문 입니다.
-# Birdman
+
 # 버드맨(Birdman) - 누구에게나 버드맨은 있다.
 
 ![post](https://Danpatpang.github.io/assets/img/movie/birdman/4.jpg)
