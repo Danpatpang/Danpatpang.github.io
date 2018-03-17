@@ -1,133 +1,73 @@
 ---
 layout : post
-title : "[Tip] Ubuntu 폴더 구조 및 핵심 명령어"
-subtitle : "우분투 폴더 구조 및 핵심 명령어를 알아보자"
+title : "[Tip] Ubuntu 폴더 구조 및 핵심 명령어 (1)"
+subtitle : "우분투란 무엇인가?"
 categories : Tip
 tags : Tip
 comments : true
 
 ---
-# AngularJS Modules
 
-> 이 포스트는 자습을 목적으로 [W3C school AngularJS](https://www.w3schools.com/angular/default.asp)의 내용을 토대로 작성되었습니다.
+# Ubuntu 폴더 구조 및 핵심 명령어
+
+> 이 포스트는 자습을 목적으로 [DaddyMarkes](http://daddynkidsmakers.blogspot.kr/2018/)과 [pxd UX Lab](http://story.pxd.co.kr/732)의 포스팅을 참고하여 작성하였습니다.
 
 _ _ _
 
-AngularJS 모듈은 애플리케이션을 정의합니다. 모듈은 애플리케이션의 여러 부분과 컨트롤러를 담는 컨테이너입니다. 컨트롤러는 항상 모듈에 속합니다.
+###### 소프트웨어학과를 진학 중인 학생으로써 학교 과제, 개발 등을 하다보면 Ubuntu라는 운영체제에 대해 알게된다. 문제는 Window만 사용하다 보니 막상 Ubuntu를 사용해야 할 때 왜 사용해야 하는지, 명령어는 무엇인지, 왜 오류가 발생하는지도 모르는 것이다. 이번 포스팅을 기회로 Ubuntu와 좀 더 가까워지는 계기가 됬으면 좋겠다.
 
-### Creating a Module
+### 우분투란 무엇인가?
 
-모듈은 AngularJS의 함수 `angular.module`에 의해 생성됩니다.
-```
-<div ng-app="myApp">...</div>
-<script>
-    var app = angular.module("myApp", []);
-</script>
-```
-파라미터 "myApp"은 애플리케이션에서 실행될 HTML 요소를 나타냅니다.
-이제 AngularJS 애플리케이션에 컨트롤러, 명령어, 필터 등 다양한 것을 추가할 수 있습니다.
+![ubuntu](http://www.danpatpang.github.io/assets/img/Ubuntu/ubuntu.png)
 
-### Adding a Controller
+ 위키백과에 따르면 [우분투](https://ko.wikipedia.org/wiki/%EC%9A%B0%EB%B6%84%ED%88%AC_(%EC%9A%B4%EC%98%81_%EC%B2%B4%EC%A0%9C)는 데비안(Debian) GNU / 리눅스를 기반으로 만들어졌으며 고유한 데스크바 환경을 사용하는 리눅스 배포판으로 알려져 있다. 즉, 우분투는 리눅스의 여러 배포판 중에서 데비안이라는 배포판이 있는데 그 중에서 또 하나의 배포판인 것이다.<br/>
+그렇다면 GNU와 리눅스는 무엇일까?
 
-애플리케이션에 컨트롤러를 추가하고 `ng-controller` 명령어로 컨트롤러를 참조합니다.
+##### GNU와 리눅스
 
-**Example**
-```
-<div ng-app="myApp" ng-controller="myCtrl">
-    {{ firstName + " " + lastName }}
-</div>
+![Linux](https://www.danpatpang.github.io/assets/img/Ubuntu/linux.png)
 
-<script>
-    var app = angular.module("myApp", []);
-    app.controller("myCtrl", function($scope) {
-        $scope.firstName = "John";
-        $scope.lastName = "Doe";
-    });
-</script>
-```
+리눅스는 1989년 리눅스 토발즈(Linus Torvalds)가 유닉스(Unix)를 기반으로 개발된 개인 컴퓨터용 공개 운영체제이다. 재밌는 점은 리눅스는 소스 코드를 완전히 무료로 공개하여 전세계적으로 약 5백만 명이 넘는 프로그램 개발자들이 이 프로젝트에 참가하여 지속적인 업그레이드를 이루어나가고 있는 점이다. 나의 입장에서는 리눅스가 오픈 소스의 시발점이 아닌가 싶다.
+<br/>
+GNU(Gnu is not Unix)는 IBM과 미국 전신전화 등 컴퓨터 기업들이 유닉스를 사용화해서 사용료를 요구하는 것에 반발하여 시작되었다. 소프트웨어 상업화와 독점 체제에 반대하고 초기 컴퓨터 개발 공동체의 상호협력적인 문화로 돌아갈 것을 주장하면서 GNU 선언문이 발표되었고, GNU 프로젝트를 지원하기 위해 개발자들은 자유 소프트웨어 재단(FSF)를 설립, GNU공개 라이센스(GPL)이라는 규약을 만들었다. 1990년대 초 GNU 프로젝트는 운영체제에 필요한 많은 프로그램을 만들었지만, 장치 드라이버나 커널 등이 미완성 상태였다. 이 때 리눅스토발즈가 사용자와의 인터페이스를 담당하는 리눅스 커널을 발표하게 된다. 이 운영체제를 GNU/Linux 라고 부른다.
+<br/>
+리눅스의 특징은 첫 번째로, 유닉스 기반으로 기존의 유닉스는 높은 하드웨어 스펙을 기반으로 복잡하고 큰 네트워크 시스템을 위해 만들어진 반해, 커널과 명령어 체계를 바꾸어서 일반인들이 보다 쉽게 사용하도록 만들었다. 유닉스를 기반으로 하였기에 개발자들에게 익숙한 환경으로 개발을 할 수 있다. 두 번째로, 다중 사용자와 멀티 태스킹을 지원하는 점이다. 세 번째로, 자유 소프트웨어라는 점이다. 누구나 소스 코드를 이용하여 수정해서 재배포 할 수 있으며, 이러한 리눅스 커널과 소프트웨어 등을 모아서 패키지 관리 프로그램으로 구성한 것을 리눅스 배포판이라고 한다.
+<br/>
+#### 즉, 수 많은 리눅스 배포판들은 서로 다른 목적과 환경에서 사용되고 있지만, 리눅스 커널이라는 하나의 줄기를 가지고 있다.
 
-### Adding a Directive
+![Torvalds](https://www.danpatpnag.github.io/assets/img/Ubuntu/to.jpg)
 
-AngularJS는 애플리케이션에 기능을 추가할 수 있는 명령어 집합을 가지고 있습니다.
-자세한 내용은 [AngularJS directive reference](https://www.w3schools.com/angular/angular_ref_directives.asp)에서 다루겠습니다.
-또한, 모듈을 사용하여 애플리케이션에 직접 명령어를 추가 할 수 있습니다.
+##### 우분투의 탄생
 
-**Example**
-```
-<!DOCTYPE html>
-<html>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
-    </script>
-	<body>
-	<div ng-app="myApp" direct></div>
-	<script>
-        var app = angular.module("myApp", []);
-        app.directive("direct", function() {
-            return {
-                template : "I was made jjn a directive constructor!"
-            };
-        });
-	</script>
-	</body>
-</html>
-```
+우분투의 개발은 남아프리카 공화국의 사업가인 마크 셔틀워스(Mark Shuttleworth)에 의해 시작되었다. 현재 개발 커뮤니티에 속한 다수의 팀들이 우분투의 구성 요소들을 만들고 있으며, 우분투 재단이 이를 관리하고 있다.
 
-### Moudles and Controllers in Files
-AngularJS 애플리케이션에서 모듈과 컨트롤러를 JavaScript파일에 저장하는 것이 일반적입니다. 이 예제에서 "myApp.js"는 모듈을 정의하고 "myCtrl.js"는 컨트롤러를 포함합니다.
+##### 우분투의 특징
 
-**Example**
-```
-<!DOCTYPE html>
-<html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<body>
-    <div ng-app="myApp" ng-controller="myCtrl">
-        {{ firstName + " " + lastName }}
-    </div>
-    <script src="myApp.js"></script>
-    <script src="myCtrl.js"></script>
-</body>
-</html>
-```
-```
-//myApp.js
-var app = angular.module("myApp",[]);
-```
-> 모듈 정의 안에 있는 `[]` 파라미터를 사용하여 종속 모듈을 정의 할 수 있습니다.
-> `[]` 파라미터가 없으면 새 모듈을 만들지 않고 기존 모듈을 검색합니다.
+우분투는 개인용 데스크탑 환경에 최적화 되어있다. 대부분의 리눅스 배포판들이 서버용으로 사용되고 있는 것에 반하여, 우분투는 개인 사용자와 데스크탑 환경에 최적화 되도록 설계되어 있다. 또한, 리눅스의 특징을 그대로 물려 받아 자유 소프트웨어에 기반하기 때문에 누구나 무료로 운영체제를 다운로드 받아서 사용할 수 있다.
 
-```
-//myCtrl.js
-app.controller("myCtrl", function($scope) {
-$scope.firstName = "Dan";
-$scope.lastName = "patpang";
-});
-```
+##### 우분투의 철학
 
-### Functions can Pollute the Global Namespace
+'우분투'라는 말은 사람들간의 관계와 헌신에 중점을 둔 윤리 사상, 인본주의 사상으로써 아프리카의 전통적인 사상이며, 평화 운동의 사상적인 뿌리라고 한다. 우분투 역시 '우분투'의 정신을 개발 철학으로 삼고 있다. 그래서 우분투의 소프트웨어 사용은 모두 무료이며, 도구는 모든 사람들의 모국어로 사용하며, 어떤 장애를 가진 사람도 이용할 수 있어야 한다는 철학을 가지고 있다. 또한 리눅스와 같이 사람들은 자유롭게 소프트웨어를 수정하고 변경하며, 업데이트에 기여할 수 있다.
 
-전역 함수는 다른 script를 덮어쓰거나 파괴하기 쉬우므로 JavaScript에서 피해야 합니다. AngularJS 모듈은 모든 기능을 모듈에 로컬로 유지함으로써 이 문제를 줄입니다.
+![logo](https://www.danpatpang.github.io/assets/img/Ubuntu/ubun.jpg)
 
-### When to Load the Library
+##### 우분투의 역사
 
-HTML 애플리케이션에서 `<body>`태그의 끝 부분에 스크립트를 배치하는 것이 일반적이지만 AngularJS 라이브러리는 `<head>`의 시작 부분 또는 `<body>`의 첫 부분에 적는 것이 좋습니다. 이는 `angular.module` 라이브러리를 로드한 후에 호출을 컴파일 할 수 있기 때문입니다.
+우부투는 일년에 두 차례 새로운 버전을 릴리즈 하는데 나온 연도와 달로 버전을 매긴다. 배포 이전에는 개발 코드 명으로 동물 이름을 붙여 사용했다.
 
-**Example**
-```
-<!DOCTYPE html>
-<html>
-<body>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <div ng-app="myApp" ng-controller="myCtrl">
-    	{{ firstName + " " + lastName }}
-    </div>
-    <script>
-        var app = angular.module("myApp", []);
-        app.controller("myCtrl", function($scope) {
-            $scope.firstName = "Dan";
-            $scope.lastName = "patpang";
-        });
-    </script>
-</body>
-</html>
-```
+![version](https://www.danpatpnag.github.io/assets/img/Ubuntu/version.jpg)
+
+버전 번호 뒤에 LTS는 Long Term Support의 약어로서 장기적으로 지원하는 버전임을 뜻하며 가장 안정적인 버전이다. 이러한 LTS 버전은 2년에 1 번씩 배포되고 있다.
+
+###### 다음 포스팅에서는 우분투의 파일 구조와 핵심 명령어들에 대해서 알아 보겠다.
+
+** 
+
+출처 <br/>
+
+[DaddyMarkes](http://daddynkidsmakers.blogspot.kr/2018/)
+[pxd UX Lab](http://story.pxd.co.kr/732)
+[wiki](https://en.wikipedia.org/wiki/Ubuntu_(operating_system)
+[naver](http://terms.naver.com/entry.nhn?docId=1180044&cid=40942&categoryId=32839)
+
+**
