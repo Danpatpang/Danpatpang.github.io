@@ -8,7 +8,7 @@ comments : true
 
 ---
 
-# Ubuntu 폴더 구조 및 핵심 명령어
+# 우분투란 무엇인가?
 
 > 이 포스트는 자습을 목적으로 [DaddyMarkes](http://daddynkidsmakers.blogspot.kr/2018/)과 [pxd UX Lab](http://story.pxd.co.kr/732)의 포스팅을 참고하여 작성하였습니다.
 
@@ -18,24 +18,24 @@ _ _ _
 
 ### 우분투란 무엇인가?
 
-![ubuntu](http://www.danpatpang.github.io/assets/img/Ubuntu/ubuntu.png)
+![ubuntu](http://Danpatpang.github.io/assets/img/Ubuntu/ubuntu.png)
 
- 위키백과에 따르면 [우분투](https://ko.wikipedia.org/wiki/%EC%9A%B0%EB%B6%84%ED%88%AC_(%EC%9A%B4%EC%98%81_%EC%B2%B4%EC%A0%9C)는 데비안(Debian) GNU / 리눅스를 기반으로 만들어졌으며 고유한 데스크바 환경을 사용하는 리눅스 배포판으로 알려져 있다. 즉, 우분투는 리눅스의 여러 배포판 중에서 데비안이라는 배포판이 있는데 그 중에서 또 하나의 배포판인 것이다.<br/>
+위키백과에 따르면  [우분투](https://en.wikipedia.org/wiki/Ubuntu)는 데비안(Debian) GNU / 리눅스를 기반으로 만들어졌으며 고유한 데스크바 환경을 사용하는 리눅스 배포판으로 알려져 있다. 즉, 우분투는 리눅스의 여러 배포판 중에서 데비안이라는 배포판이 있는데 그 중에서 또 하나의 배포판인 것이다.<br/>
 그렇다면 GNU와 리눅스는 무엇일까?
 
 ##### GNU와 리눅스
 
-![Linux](https://www.danpatpang.github.io/assets/img/Ubuntu/linux.png)
+![Linux](https://Danpatpang.github.io/assets/img/Ubuntu/linux.png)
 
 리눅스는 1989년 리눅스 토발즈(Linus Torvalds)가 유닉스(Unix)를 기반으로 개발된 개인 컴퓨터용 공개 운영체제이다. 재밌는 점은 리눅스는 소스 코드를 완전히 무료로 공개하여 전세계적으로 약 5백만 명이 넘는 프로그램 개발자들이 이 프로젝트에 참가하여 지속적인 업그레이드를 이루어나가고 있는 점이다. 나의 입장에서는 리눅스가 오픈 소스의 시발점이 아닌가 싶다.
-<br/>
+<br/><br/>
 GNU(Gnu is not Unix)는 IBM과 미국 전신전화 등 컴퓨터 기업들이 유닉스를 사용화해서 사용료를 요구하는 것에 반발하여 시작되었다. 소프트웨어 상업화와 독점 체제에 반대하고 초기 컴퓨터 개발 공동체의 상호협력적인 문화로 돌아갈 것을 주장하면서 GNU 선언문이 발표되었고, GNU 프로젝트를 지원하기 위해 개발자들은 자유 소프트웨어 재단(FSF)를 설립, GNU공개 라이센스(GPL)이라는 규약을 만들었다. 1990년대 초 GNU 프로젝트는 운영체제에 필요한 많은 프로그램을 만들었지만, 장치 드라이버나 커널 등이 미완성 상태였다. 이 때 리눅스토발즈가 사용자와의 인터페이스를 담당하는 리눅스 커널을 발표하게 된다. 이 운영체제를 GNU/Linux 라고 부른다.
-<br/>
+<br/><br/>
 리눅스의 특징은 첫 번째로, 유닉스 기반으로 기존의 유닉스는 높은 하드웨어 스펙을 기반으로 복잡하고 큰 네트워크 시스템을 위해 만들어진 반해, 커널과 명령어 체계를 바꾸어서 일반인들이 보다 쉽게 사용하도록 만들었다. 유닉스를 기반으로 하였기에 개발자들에게 익숙한 환경으로 개발을 할 수 있다. 두 번째로, 다중 사용자와 멀티 태스킹을 지원하는 점이다. 세 번째로, 자유 소프트웨어라는 점이다. 누구나 소스 코드를 이용하여 수정해서 재배포 할 수 있으며, 이러한 리눅스 커널과 소프트웨어 등을 모아서 패키지 관리 프로그램으로 구성한 것을 리눅스 배포판이라고 한다.
-<br/>
+<br/><br/>
 #### 즉, 수 많은 리눅스 배포판들은 서로 다른 목적과 환경에서 사용되고 있지만, 리눅스 커널이라는 하나의 줄기를 가지고 있다.
 
-![Torvalds](https://www.danpatpnag.github.io/assets/img/Ubuntu/to.jpg)
+![Torvalds](https://Danpatpang.github.io/assets/img/Ubuntu/to.jpg)
 
 ##### 우분투의 탄생
 
@@ -47,15 +47,15 @@ GNU(Gnu is not Unix)는 IBM과 미국 전신전화 등 컴퓨터 기업들이 �
 
 ##### 우분투의 철학
 
-'우분투'라는 말은 사람들간의 관계와 헌신에 중점을 둔 윤리 사상, 인본주의 사상으로써 아프리카의 전통적인 사상이며, 평화 운동의 사상적인 뿌리라고 한다. 우분투 역시 '우분투'의 정신을 개발 철학으로 삼고 있다. 그래서 우분투의 소프트웨어 사용은 모두 무료이며, 도구는 모든 사람들의 모국어로 사용하며, 어떤 장애를 가진 사람도 이용할 수 있어야 한다는 철학을 가지고 있다. 또한 리눅스와 같이 사람들은 자유롭게 소프트웨어를 수정하고 변경하며, 업데이트에 기여할 수 있다.
+'우분투'라는 말은 사람들간의 관계와 헌신에 중점을 둔 윤리 사상, 인본주의 사상으로써 아프리카의 전통적인 사상이며, 평화 운동의 사상적인 뿌리라고 한다. 우분투 역시 '우분투'의 정신을 개발 철학으로 삼고 있다. <br/>그래서 우분투의 소프트웨어 사용은 모두 무료이며, 도구는 모든 사람들의 모국어로 사용하며, 어떤 장애를 가진 사람도 이용할 수 있어야 한다는 철학을 가지고 있다. 또한 리눅스와 같이 사람들은 자유롭게 소프트웨어를 수정하고 변경하며, 업데이트에 기여할 수 있다.
 
-![logo](https://www.danpatpang.github.io/assets/img/Ubuntu/ubun.jpg)
+![logo](https://Danpatpang.github.io/assets/img/Ubuntu/ubun.jpg)
 
 ##### 우분투의 역사
 
 우부투는 일년에 두 차례 새로운 버전을 릴리즈 하는데 나온 연도와 달로 버전을 매긴다. 배포 이전에는 개발 코드 명으로 동물 이름을 붙여 사용했다.
 
-![version](https://www.danpatpnag.github.io/assets/img/Ubuntu/version.jpg)
+![version](https://Danpatpang.github.io/assets/img/Ubuntu/version.png)
 
 버전 번호 뒤에 LTS는 Long Term Support의 약어로서 장기적으로 지원하는 버전임을 뜻하며 가장 안정적인 버전이다. 이러한 LTS 버전은 2년에 1 번씩 배포되고 있다.
 
@@ -64,10 +64,9 @@ GNU(Gnu is not Unix)는 IBM과 미국 전신전화 등 컴퓨터 기업들이 �
 ** 
 
 출처 <br/>
-
-[DaddyMarkes](http://daddynkidsmakers.blogspot.kr/2018/)
-[pxd UX Lab](http://story.pxd.co.kr/732)
-[wiki](https://en.wikipedia.org/wiki/Ubuntu_(operating_system)
-[naver](http://terms.naver.com/entry.nhn?docId=1180044&cid=40942&categoryId=32839)
+[DaddyMarkes](http://daddynkidsmakers.blogspot.kr/2018/)<br/>
+[pxd UX Lab](http://story.pxd.co.kr/732)<br/>
+[Wiki](https://en.wikipedia.org/wiki/Ubuntu)<br/>
+[Naver](http://terms.naver.com/entry.nhn?docId=1180044&cid=40942&categoryId=32839)
 
 **
