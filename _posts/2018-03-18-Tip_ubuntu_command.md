@@ -1,16 +1,16 @@
 ---
 layout : post
-title : "[Tip] Ubuntu 폴더 구조 및 핵심 명령어 (1)"
-subtitle : "우분투란 무엇인가?"
+title : "[Tip] Ubuntu 폴더 구조 및 핵심 명령어 (2)"
+subtitle : "우분투의 파일 구조"
 categories : Tip
 tags : Tip
 comments : true
 
 ---
 
-# 우분투의 파일 구조 및 핵심 명령어
+# 우분투의 파일 구조
 
-> 이 포스트는 자습을 목적으로 [DaddyMarkes](http://daddynkidsmakers.blogspot.kr/2018/)과 [pxd UX Lab](http://story.pxd.co.kr/732)의 포스팅을 참고하여 작성하였습니다.
+> 이 포스트는 자습을 목적으로 [DaddyMarkes](http://daddynkidsmakers.blogspot.kr/2018/), [pxd UX Lab](http://story.pxd.co.kr/732), [webdir](http://webdir.tistory.com/101)의 포스팅을 참고하여 작성하였습니다.
 
 _ _ _
 
@@ -30,7 +30,7 @@ _ _ _
 
 리눅스의 파일 구조는 윈도우와는 다른 구조를 가지고 있다. 기본적으로 디렉토리를 구분하는 기호로 우분투에서는 '/', 윈도우에서는 '\'를 사용한다. 디렉토리 또한 그 명칭을 리눅스에서는 디렉토리(directory), 윈도우에서는 폴더(folder)라고 부른다.
 
-![structure](http://Danpatpang.github.io/assets/img/Ubuntu/Structure2.gif)
+![structure](http://Danpatpang.github.io/assets/img/Ubuntu/structure2.gif)
 
 리눅스 시스템의 디렉토리 구조는 전체적으로 역 트리구조를 하고 있다. 그리고 명령어의 종류와 성격, 사용권한 등에 따라 각각의 디렉토리들로 구분된다.
 
@@ -76,9 +76,7 @@ _ _ _
 | /var/spool/at/ | 예약작업에 관한 파일들이 저장되는 디렉토리. |
 | /lost+found | 최상위 디렉토리인 '/' 디렉토리에만 존재하는 것이 아니라 파일 시스템마다 존재할 수 있는 디렉토리. 이 디렉토리는 파일 시스템 체크 및 복구 유틸리티 실행 후에 주로 생성 되는 것으로 복구되지 않은 채로 블록만 존재하는 파일, 연결이 끊어진 inode들이 숫자 파일 형태로 존재하는 곳이다. 숫자 형태로 존재하는 파일들은 파일이름만 바꾸면 바로 복구 가능하다. |
 
-##### 우분투의 핵심 명령어
-
-
+##### 생각보다 많은 디렉토리가 존재했고, 각 디렉토리마다의 저장된 내용들도 신기한 것들이 많았다. 포스팅을 하면서도 어떤 부분은 이해가 잘 안가지만 이 글을 쓰기 전보다는 지식이 늘어난 것 같아서 기분이 좋다. 생각보다 파일 구조에 관한 글이 길어진 관계로 다음 포스팅에서 우분투의 핵심 명령어들에 대해서 알아보도록 하겠다.
 
 ###### 출처 <br/>
 [DaddyMarkes](http://daddynkidsmakers.blogspot.kr/2018/)<br/>
