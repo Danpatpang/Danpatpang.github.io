@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: Pascal
-slug: Pascal
+title: Blockchain
+slug: Blockchain
 category: Development
 menu: false
 order: 7
