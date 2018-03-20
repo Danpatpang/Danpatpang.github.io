@@ -18,8 +18,7 @@ tagline:             단팥빵을 좋아하는 개발자
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  단팥빵이 좋아요.<br/>
-  평범한 대학생의 좌충우돌 개발 이야기.
+  단팥빵이 좋아하는 대학생의 좌충우돌 개발 이야기 :).
 
 
 # This should be the same author as first entry in `_data/authors.yml`
