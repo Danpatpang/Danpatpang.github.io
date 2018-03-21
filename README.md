@@ -1,6 +1,6 @@
 ## 소개
 
-![me](http://Danpatpang.github.io/assets/img/me.jpg)
+<img src="http://Danpatpang.github.io/assets/img/me.jpg" width="150" height="150">
 
 ##### 단팥빵을 좋아하는 개발자.
 ##### 하고싶은 것도 배우고 싶은 것도 많은 평범한 대학생.
