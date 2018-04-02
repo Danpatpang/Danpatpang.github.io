@@ -2,8 +2,8 @@
 layout : post
 title : "[To me] 작심삼일 프로젝트(1)"
 subtitle : "[To me] 작심삼일의 시작"
-categories : Today's word
-tags : To me
+categories : Today's_word
+tags : To_me
 comments : true
 
 ---

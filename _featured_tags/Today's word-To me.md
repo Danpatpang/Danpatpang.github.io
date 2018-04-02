@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: To me
-slug: To me
-category: Today's world
+title: To_me
+slug: To_me
+category: Today's_world
 menu: false
 order: 21
 
