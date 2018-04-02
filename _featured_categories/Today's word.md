@@ -2,9 +2,9 @@
 
 layout : list
 
-title : Tip
+title : Today's word
 
-slug : Tip
+slug : Today's word
 
 menu : true
 
