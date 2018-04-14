@@ -1,6 +1,6 @@
 ---
 layout : post
-title : "[To me] 이기려는 마음"
+title : "[To me] 작심삼일 프로젝트(4)"
 subtitle : "[To me] 이기려는 마음"
 categories : Today's_word
 tags : To_me
